@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Bootslander Bootstrap Template - Index</title>
+    <title>Linky</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -38,15 +38,31 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1><a href="/"><span>Linkhive</span></a></h1>
+                <h1><a href="/"><span>Linky</span></a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
+                    @auth <!-- Check if user is logged in -->
+                    <li class="dropdown"><a href="#">{{ Auth::user()->name }}<i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{route('profile.edit')}}">Profile</a></li>
+                            <li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    @else
                     <li><a class="nav-link scrollto" href="{{ route('login') }}">LogIn</a></li>
                     <li><a class="nav-link scrollto" href="{{ route('register') }}">SignUp</a></li>
+                    @endauth
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -61,7 +77,7 @@
             <div class="row justify-content-between">
                 <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
                     <div data-aos="zoom-out">
-                        <h1>Make Your Profile With <span>Linkhive</span></h1>
+                        <h1>Make Your Profile With <span>Linky</span></h1>
                         <h2>In one, simple link in bio.</h2>
                         <div class="text-center text-lg-start">
                             <input type="text" class="scrollto claim-username" name="username" placeholder="Find your username ..." required>
