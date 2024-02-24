@@ -25,7 +25,7 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -47,7 +47,8 @@
                 <ul>
                     <li><a class="nav-link scrollto" href="{{ route('login') }}">LogIn</a></li>
                     <li><a class="nav-link scrollto" href="{{ route('register') }}">SignUp</a></li>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
         </div>
@@ -95,7 +96,7 @@
 
 
 
-    
+
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
