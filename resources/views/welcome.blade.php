@@ -79,11 +79,6 @@
                     <div data-aos="zoom-out">
                         <h1>Make Your Profile With <span>Linky</span></h1>
                         <h2>In one, simple link in bio.</h2>
-                        @auth
-                        <div class="text-center text-lg-start">
-                        <a class="btn-get-started scrollto" href="{{ route('dashboard') }}">LogIn</a>
-                        </div>
-                        @else
                         <div class="text-center text-lg-start">
                             <input type="text" class="scrollto claim-username" name="username" placeholder="Find your username ..." required>
                             <a href="#about" class="btn-get-started scrollto">Continue</a>
