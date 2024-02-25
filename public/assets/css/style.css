@@ -116,17 +116,22 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
+  width: 85%;
+  height: 50px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: rgba(1, 4, 136, 0.9);
+  background: rgba(2, 3, 87, 0.774);
+  margin: 15px auto;
+  border-radius: 30px;
 }
 
-#header.header-transparent {
+/* #header.header-transparent {
   background: transparent;
+} */
+#header .container{
+  width: 95%;
 }
-
 #header.header-scrolled {
   background: rgba(1, 4, 136, 0.9);
   height: 60px;
@@ -488,6 +493,7 @@ h6 {
 
   #hero .hero-img img {
     max-width: 50%;
+    margin-top: 20px;
   }
 
   #hero h1 {
