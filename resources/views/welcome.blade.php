@@ -77,18 +77,17 @@
             <div class="row justify-content-between">
                 <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
                     <div data-aos="zoom-out">
-                        <h1>Make Your Profile With <span>Linky</span></h1>
+                        <h1>Make Your Mini Portfolio With <span>Linky</span></h1>
                         <h2>In one, simple link in bio.</h2>
-                        @auth
                         <div class="text-center text-lg-start">
-                        <a class="btn-get-started scrollto" href="{{ route('dashboard') }}">Continue</a>
-                        </div>
-                        @else
-                        <div class="text-center text-lg-start">
+                            @auth
+                            <a href="{{route('dashboard')}}" class="btn-get-started scrollto">Continue</a>
+                            @else
                             <input type="text" class="scrollto claim-username" name="username" placeholder="Find your username ..." required>
-                            <a href="#about" class="btn-get-started scrollto">Continue</a>
+                            <a href="#about" class="btn-get-started scrollto">Check</a>
+                            @endauth
                         </div>
-                        @endauth
+                       
                     </div>
                 </div>
                 <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
