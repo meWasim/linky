@@ -116,14 +116,15 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  width: 85%;
-  height: 50px;
+  width: 90%;
+  height: 10vh;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
   background: rgba(2, 3, 87, 0.774);
   margin: 15px auto;
   border-radius: 30px;
+  margin-bottom: 20px;
 }
 
 /* #header.header-transparent {
